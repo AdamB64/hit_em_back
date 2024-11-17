@@ -354,12 +354,14 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.46f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Kabungus/HouseholdItems/Scripts/MouseLook.cs"
 "Assets/Kabungus/HouseholdItems/Scripts/PlayerMovement.cs"
-"Assets/Scripts/Buttons/ExScript.cs"
-"Assets/Scripts/Buttons/HPScript.cs"
-"Assets/Scripts/Buttons/QuitScript.cs"
-"Assets/Scripts/Buttons/SetScript.cs"
-"Assets/Scripts/Buttons/StartScript.cs"
-"Assets/Scripts/Buttons/SwScript.cs"
+"Assets/Scripts/Buttons/Ex Sripts/CloseHPScript.cs"
+"Assets/Scripts/Buttons/Ex Sripts/CloseSwScript.cs"
+"Assets/Scripts/Buttons/Ex Sripts/HPScript.cs"
+"Assets/Scripts/Buttons/Ex Sripts/SwScript.cs"
+"Assets/Scripts/Buttons/Start scripts/ExScript.cs"
+"Assets/Scripts/Buttons/Start scripts/QuitScript.cs"
+"Assets/Scripts/Buttons/Start scripts/SetScript.cs"
+"Assets/Scripts/Buttons/Start scripts/StartScript.cs"
 -langversion:9.0
 /deterministic
 /optimize+
