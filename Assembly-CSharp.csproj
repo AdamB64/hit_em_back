@@ -65,13 +65,18 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Buttons\Ex Sripts\CloseSwScript.cs" />
     <Compile Include="Assets\Scripts\Buttons\Start scripts\ExScript.cs" />
+    <Compile Include="Assets\Scripts\HealthScript.cs" />
     <Compile Include="Assets\Scripts\Buttons\Ex Sripts\CloseHPScript.cs" />
+    <Compile Include="Assets\Scripts\Options\VolumeScript.cs" />
     <Compile Include="Assets\Scripts\Buttons\Start scripts\QuitScript.cs" />
+    <Compile Include="Assets\Scripts\Options\ResolutionScript.cs" />
     <Compile Include="Assets\Scripts\Buttons\Ex Sripts\SwScript.cs" />
     <Compile Include="Assets\Scripts\Buttons\Start scripts\StartScript.cs" />
     <Compile Include="Assets\Kabungus\HouseholdItems\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Buttons\Start scripts\SetScript.cs" />
+    <Compile Include="Assets\Scripts\colourChange.cs" />
     <Compile Include="Assets\Scripts\Buttons\Ex Sripts\HPScript.cs" />
+    <Compile Include="Assets\ModularFirstPersonController\FirstPersonController\FirstPersonController.cs" />
     <Compile Include="Assets\Kabungus\HouseholdItems\Scripts\PlayerMovement.cs" />
   </ItemGroup>
   <ItemGroup>
