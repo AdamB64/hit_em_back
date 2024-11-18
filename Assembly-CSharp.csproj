@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Buttons\Ex Sripts\CloseSwScript.cs" />
     <Compile Include="Assets\Scripts\Buttons\Start scripts\ExScript.cs" />
+    <Compile Include="Assets\Scripts\HealthPackScript.cs" />
     <Compile Include="Assets\Scripts\HealthScript.cs" />
     <Compile Include="Assets\Scripts\Buttons\Ex Sripts\CloseHPScript.cs" />
     <Compile Include="Assets\Scripts\Options\VolumeScript.cs" />
@@ -83,6 +84,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Julien Tonsuso\Modular Fantasy Bridges\README.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
