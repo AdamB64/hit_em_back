@@ -58,9 +58,13 @@ public class HealthBar : MonoBehaviour
         UpdateHealthBar();
     }
 
-    void dead(){
-    // Check if DeadImage is assigned
-    if (DeadImage == null)
+    private void dead(){
+        Debug.Log("Dead");
+    //FirstPersonController player = GetComponent<FirstPersonController>();
+
+
+        // Check if DeadImage is assigned
+        if (DeadImage == null)
     {
         Debug.LogError("DeadImage is not assigned in the Inspector!");
         return; // Exit the method early to avoid further errors
@@ -79,13 +83,14 @@ public class HealthBar : MonoBehaviour
 
     // Start the coroutine for delayed actions
     StartCoroutine(WaitAndExecute());
+    Cursor.lockState = CursorLockMode.None;
 
     }
 
      IEnumerator WaitAndExecute()
     {
         // Wait for 30 seconds
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(10);
 
         // Code to execute after 30 seconds
         Debug.Log("30 seconds have passed!");
