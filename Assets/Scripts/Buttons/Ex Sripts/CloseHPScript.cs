@@ -6,7 +6,7 @@ public class HPDropImage : MonoBehaviour
     public RectTransform targetObject;
 
     // The target y-coordinate in world space
-    private float targetY = -207f;
+    private float targetY = -1007f;
 
     // Public method to move the target object
     public void MoveToTargetY()
@@ -17,7 +17,7 @@ public class HPDropImage : MonoBehaviour
             Vector3 worldPosition = targetObject.position;
 
             // Set the new world position with target y-coordinate
-            targetObject.position = new Vector3(worldPosition.x, targetY, worldPosition.z);
+            targetObject.position = new Vector3(worldPosition.x-4, targetY, worldPosition.z);
         }
         else
         {

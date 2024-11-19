@@ -6,7 +6,7 @@ public class SwDropImage : MonoBehaviour
     public RectTransform targetObject;
 
     // The target y-coordinate in world space
-    private float targetY = -300f;
+    private float targetY = -1000f;
 
     // Public method to move the target object
     public void MoveToTargetY()
@@ -17,7 +17,7 @@ public class SwDropImage : MonoBehaviour
             Vector3 worldPosition = targetObject.position;
 
             // Set the new world position with target y-coordinate
-            targetObject.position = new Vector3(worldPosition.x, targetY, worldPosition.z);
+            targetObject.position = new Vector3(worldPosition.x+4, targetY, worldPosition.z);
         }
         else
         {

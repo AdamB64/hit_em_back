@@ -24,3 +24,4 @@ echo "*.opendb.meta" >> .gitignore
 echo "*.VC.db.meta" >> .gitignore
 echo "sysinfo.txt" >> .gitignore
 /[Tt]emp/
+.vs/
