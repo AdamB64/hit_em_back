@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|c:\\users\\2107616\\2024-25\\game dev\\game\\hit_em_back\\assets\\scripts\\buttons\\ex sripts\\swscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttons\\ex sripts\\swscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\assets\\scripts\\buttons\\ex sripts\\closeswscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttons\\ex sripts\\closeswscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\assets\\scripts\\buttons\\ex sripts\\closehpscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttons\\ex sripts\\closehpscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\assets\\scripts\\buttons\\ex sripts\\hpscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttons\\ex sripts\\hpscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|c:\\users\\2107616\\2024-25\\game dev\\game\\hit_em_back\\assets\\scripts\\aienemiesscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\aienemiesscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,51 +19,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SwScript.cs",
-              "DocumentMoniker": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\Buttons\\Ex Sripts\\SwScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Buttons\\Ex Sripts\\SwScript.cs",
-              "ToolTip": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\Buttons\\Ex Sripts\\SwScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Buttons\\Ex Sripts\\SwScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABBAAAAAAAAAA==",
+              "Title": "AIEnemiesScript.cs",
+              "DocumentMoniker": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\AIEnemiesScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AIEnemiesScript.cs",
+              "ToolTip": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\AIEnemiesScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AIEnemiesScript.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAADwv3QAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T14:50:59.106Z",
+              "WhenOpened": "2024-11-19T15:36:52.393Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HPScript.cs",
-              "DocumentMoniker": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\Buttons\\Ex Sripts\\HPScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Buttons\\Ex Sripts\\HPScript.cs",
-              "ToolTip": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\Buttons\\Ex Sripts\\HPScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Buttons\\Ex Sripts\\HPScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T14:50:55.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CloseSwScript.cs",
-              "DocumentMoniker": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\Buttons\\Ex Sripts\\CloseSwScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Buttons\\Ex Sripts\\CloseSwScript.cs",
-              "ToolTip": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\Buttons\\Ex Sripts\\CloseSwScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Buttons\\Ex Sripts\\CloseSwScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T14:50:41.737Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CloseHPScript.cs",
-              "DocumentMoniker": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\Buttons\\Ex Sripts\\CloseHPScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Buttons\\Ex Sripts\\CloseHPScript.cs",
-              "ToolTip": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\Buttons\\Ex Sripts\\CloseHPScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Buttons\\Ex Sripts\\CloseHPScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T14:50:41.137Z"
             }
           ]
         }
