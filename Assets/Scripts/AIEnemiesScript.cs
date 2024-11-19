@@ -14,6 +14,17 @@ public class KnightAIWithTag : MonoBehaviour
 
     void Start()
     {
+        // Check if the MeshRenderer component is enabled
+        Renderer enemyRenderer = GetComponent<Renderer>();
+        if (enemyRenderer == null)
+        {
+            Debug.LogError("No Renderer component found. Make sure the AI GameObject has a MeshRenderer or SkinnedMeshRenderer component.");
+        }
+        else
+        {
+            enemyRenderer.enabled = true; // Ensure the renderer is enabled
+        }
+
         // Get the required components
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
