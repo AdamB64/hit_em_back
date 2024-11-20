@@ -525,15 +525,15 @@ GameObject:
   - component: {fileID: 593232081}
   - component: {fileID: 593232084}
   - component: {fileID: 593232080}
+  - component: {fileID: 593232085}
   - component: {fileID: 593232087}
   - component: {fileID: 593232086}
-  - component: {fileID: 593232085}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &593232080
 BoxCollider:
@@ -1410,28 +1410,6 @@ MonoBehaviour:
   chaseRange: 10
   attackRange: 2
   detectionInterval: 1
---- !u!195 &1535802285
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535802281}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!137 &1535802288
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -2159,6 +2137,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1210237379505943399, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
+      propertyPath: m_BaseOffset
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145644, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_Name
       value: HumanMale_Character_Free
@@ -2181,7 +2163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 519.7923
+      value: 519.8075
       objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2189,23 +2171,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 321.33905
+      value: 321.3207
       objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.039585054
       objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.99921626
       objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2213,7 +2195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -175.463
       objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -2228,11 +2210,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4957605393579145644, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
-      insertIndex: -1
+      insertIndex: 2
       addedObject: {fileID: 1535802284}
-    - targetCorrespondingSourceObject: {fileID: 4957605393579145644, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1535802285}
     - targetCorrespondingSourceObject: {fileID: 4957605393579145644, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1535802288}

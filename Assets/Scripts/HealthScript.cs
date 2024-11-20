@@ -11,7 +11,10 @@ public class HealthBar : MonoBehaviour
 
     public RectTransform healthBarImage; // Reference to the RectTransform of the health bar Image
     public RawImage DeadImage;
+    public RawImage Sword;
+    public RawImage HitSword;
 
+    private bool Hit = false;
     private float originalWidth; // Stores the original width of the health bar
 
     [SerializeField]
@@ -24,16 +27,16 @@ public class HealthBar : MonoBehaviour
         originalWidth = healthBarImage.rect.width;
     }
 
-    void Update()
-    {
+    //void Update()
+    //{
         //Debug.Log("Update");
         // Example input to simulate taking damage (press Space to take damage)
-        if (Input.GetKeyDown(KeyCode.H))
-        {
+        //if (Input.GetKeyDown(KeyCode.H))
+        //{
             //Debug.Log("H key pressed");
-            TakeDamage(10f); // Decrease health by 10
-        }
-    }
+            //TakeDamage(10f); // Decrease health by 10
+        //}
+    //}
 
     void UpdateHealthBar()
     {
@@ -45,14 +48,19 @@ public class HealthBar : MonoBehaviour
         healthBarImage.sizeDelta = new Vector2(originalWidth * healthPercentage, healthBarImage.sizeDelta.y);
     }
 
-    void TakeDamage(float amount)
+    public void TakeDamage(float amount)
     {
+        Debug.Log("Player took damage: " + amount + " health");
         // Decrease health by the given amount
         currentHealth -= amount;
         if (currentHealth <= 0){
             currentHealth = 0;
             dead();
         };
+
+        Hit=true;
+        Sword.rectTransform.anchoredPosition = new Vector2(0,-400); // Adjust as needed
+        HitSword.rectTransform.anchoredPosition = new Vector2(0, 0); // Adjust as needed
 
         // Update the health bar
         UpdateHealthBar();

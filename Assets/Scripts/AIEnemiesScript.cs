@@ -6,19 +6,28 @@ public class KnightAIWithTag : MonoBehaviour
     public float chaseRange = 10f; // Range within which the knight will start chasing
     public float attackRange = 2f; // Range within which the knight will attack
     public float detectionInterval = 1f; // How often to detect player for performance reasons
+    private bool hasDealtDamage = false; // Tracks whether damage has been dealt during this attack
+
+    private int count = 1; // Or use a bool if it's binary (true/false)
 
     private NavMeshAgent agent;
     private Animator animator;
     private Transform player;
     private bool isPlayerDetected = false;
+    private HealthBar playerStats;
+    public GameObject playerObj;
 
+    HealthBar Playerhealth;
     void Start()
     {
+
+        Debug.Log(Playerhealth);
+
         // Check if the MeshRenderer component is enabled
         Renderer enemyRenderer = GetComponent<Renderer>();
         if (enemyRenderer == null)
         {
-            Debug.LogError("No Renderer component found. Make sure the AI GameObject has a MeshRenderer or SkinnedMeshRenderer component.");
+            Debug.LogError("No Renderer component on character. Make sure the AI GameObject has a MeshRenderer or SkinnedMeshRenderer component.");
         }
         else
         {
@@ -51,13 +60,14 @@ public class KnightAIWithTag : MonoBehaviour
         {
             float distanceToPlayer = Vector3.Distance(player.position, transform.position);
 
-            if (distanceToPlayer <= attackRange)
+            if (distanceToPlayer <= attackRange && IsPlayerInFront())
             {
-                Attack();
+                //Debug.Log(distanceToPlayer);Debug.Log(IsPlayerInFront());
+                Attack(); // Keep attacking if the player is in range and in front
             }
             else if (distanceToPlayer <= chaseRange)
             {
-                Chase();
+                Chase(); // Chase the player if in range but not directly in front
             }
             else
             {
@@ -73,12 +83,13 @@ public class KnightAIWithTag : MonoBehaviour
     void DetectPlayer()
     {
         // Find the player GameObject by tag
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        playerObj = GameObject.FindGameObjectWithTag("Player");
 
         if (playerObj != null)
         {
             player = playerObj.transform;
             isPlayerDetected = true;
+            Chase();
         }
         else
         {
@@ -100,16 +111,31 @@ public class KnightAIWithTag : MonoBehaviour
 
     void Attack()
     {
+        player = playerObj.transform; // Assign the Transform
+        playerStats = playerObj.GetComponent<HealthBar>(); // Get the PlayerStats script
+        if (!IsPlayerInFront())
+        {
+            Chase(); // If the player isn't in front, switch to chasing
+            return;
+        }
+        if (animator.GetBool("isAttacking")==false){
+            count=1;
+        }
         animator.SetBool("isWalking", false);
         animator.SetBool("isAttacking", true);
 
-        if (agent != null)
-        {
-            agent.isStopped = true; // Stop moving while attacking
+        while (count==1){
+
+            if (agent != null && animator.GetBool("isAttacking")==true){
+                agent.isStopped = true; // Stop moving while attacking
+                playerStats.TakeDamage(5f); // Deal damage to the player
+                count=0;
+        }
         }
 
         if (player != null)
         {
+            //Debug.Log(player);
             transform.LookAt(new Vector3(player.position.x, transform.position.y, player.position.z)); // Face the player
         }
     }
@@ -124,4 +150,25 @@ public class KnightAIWithTag : MonoBehaviour
             agent.isStopped = true; // Stop moving
         }
     }
+
+   bool IsPlayerInFront()
+{
+    // Calculate the direction vector from the AI to the player and normalize it
+    Vector3 directionToPlayer = (player.position - transform.position).normalized;
+
+    // Calculate the dot product between the AI's forward direction and the direction to the player
+    float dotProduct = Vector3.Dot(transform.forward, directionToPlayer);
+
+    // Calculate the distance between the AI and the player
+    float distanceToPlayer = Vector3.Distance(player.position, transform.position);
+
+    // Check two conditions:
+    // 1. The dot product must be greater than 0.56f, meaning the player is roughly in front of the AI
+    //    (0.8f * 0.7 = 0.56f, which is 30% larger than the original threshold).
+    // 2. The distance to the player must be less than or equal to half the attack range, ensuring 
+    //    the player is within a closer proximity.
+    return dotProduct > 0.56f && distanceToPlayer <= attackRange / 2f;
+}
+
+
 }
