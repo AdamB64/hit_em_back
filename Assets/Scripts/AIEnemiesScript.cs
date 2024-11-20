@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;  // Add this line to use UI components like RawImage
 
 public class KnightAIWithTag : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class KnightAIWithTag : MonoBehaviour
     private bool hasDealtDamage = false; // Tracks whether damage has been dealt during this attack
 
     private int count = 1; // Or use a bool if it's binary (true/false)
+    public int health = 45;
+    public RectTransform HealthIMG;
 
     private NavMeshAgent agent;
     private Animator animator;
@@ -16,12 +19,15 @@ public class KnightAIWithTag : MonoBehaviour
     private bool isPlayerDetected = false;
     private HealthBar playerStats;
     public GameObject playerObj;
+    private float originalWidth; // Stores the original width of the health bar
 
     HealthBar Playerhealth;
     void Start()
     {
 
-        Debug.Log(Playerhealth);
+        originalWidth = HealthIMG.rect.width;
+
+        //Debug.Log(Playerhealth);
 
         // Check if the MeshRenderer component is enabled
         Renderer enemyRenderer = GetComponent<Renderer>();
@@ -169,6 +175,26 @@ public class KnightAIWithTag : MonoBehaviour
     //    the player is within a closer proximity.
     return dotProduct > 0.56f && distanceToPlayer <= attackRange / 2f;
 }
+
+    public void healthBar(float amount)
+    {
+        //Debug.Log(Playerhealth);
+        //Playerhealth = playerObj.GetComponent<HealthBar>();
+        //Debug.Log(Playerhealth);
+
+        // Decrease health by the given amount
+        originalWidth = HealthIMG.rect.width;
+        health -= (int)amount;
+        float healthPercentage = (float)health / 45f;
+        Debug.Log(HealthIMG.sizeDelta);
+        HealthIMG.sizeDelta = new Vector2(originalWidth * healthPercentage, HealthIMG.sizeDelta.y);
+        Debug.Log(HealthIMG.sizeDelta);
+        if (health <= 0)
+        {
+            health = 0;
+            Destroy(gameObject);
+        }
+    }
 
 
 }

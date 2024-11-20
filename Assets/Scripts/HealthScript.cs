@@ -50,7 +50,7 @@ public class HealthBar : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        Debug.Log("Player took damage: " + amount + " health");
+        //Debug.Log("Player took damage: " + amount + " health");
         // Decrease health by the given amount
         currentHealth -= amount;
         if (currentHealth <= 0){
@@ -59,12 +59,55 @@ public class HealthBar : MonoBehaviour
         };
 
         Hit=true;
+        if(Hit){
+            Debug.Log("Hit");
+            StartCoroutine(Attack());
+            Hit=false;
+        }
         Sword.rectTransform.anchoredPosition = new Vector2(0,-400); // Adjust as needed
-        HitSword.rectTransform.anchoredPosition = new Vector2(0, 0); // Adjust as needed
+        HitSword.rectTransform.anchoredPosition = new Vector3(435,-166, 0); // Adjust as needed
 
         // Update the health bar
         UpdateHealthBar();
     }
+
+    private IEnumerator Attack()
+{
+    Debug.Log("Attack");
+
+    // Wait until the left mouse button is clicked
+    while (!Input.GetMouseButtonDown(0))  // Wait until mouse button is clicked
+    {
+        yield return null;  // Wait one frame and then check again
+    }
+
+    // Once the button is clicked, proceed with the rest of the attack logic
+    Debug.Log("Mouse Button Clicked");
+
+    // Find all colliders within the radius
+    Collider[] hitColliders = Physics.OverlapSphere(transform.position, 5f);
+    Debug.Log("Number of colliders detected: " + hitColliders.Length);
+
+    // Loop through all the colliders found in the radius
+    foreach (Collider hitCollider in hitColliders)
+    {
+        // Check if the object has the "AI" tag
+        if (hitCollider.CompareTag("AI"))
+        {
+            Debug.Log("AI Attack");
+
+            // Get the HealthBar component (or equivalent) on the AI object
+            KnightAIWithTag aiHealth = hitCollider.GetComponent<KnightAIWithTag>();
+
+            Sword.rectTransform.anchoredPosition = new Vector3(435,-166,0); // Adjust as needed
+            HitSword.rectTransform.anchoredPosition = new Vector3(0,-400, 0); // Adjust as needed
+
+            aiHealth.healthBar(15f); // Deal damage to the AI
+            
+        }
+    }
+}
+       
 
     private void dead(){
         Debug.Log("Dead");
@@ -112,4 +155,5 @@ public class HealthBar : MonoBehaviour
         Debug.Log("Player Healed. Current Health: " + currentHealth);
         UpdateHealthBar();
     }
+
 }

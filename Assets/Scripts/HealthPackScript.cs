@@ -15,7 +15,12 @@ public class HealthPack : MonoBehaviour
             {
                 // Heal the player
                 //Debug.Log(playerHealth.currentHealth);
+                if (playerHealth.currentHealth == playerHealth.maxHealth)
+                {
+                    return; // Exit the method early if the player is already at full health
+                }else{
                 playerHealth.Heal(healAmount);
+                }
                 //Debug.Log(playerHealth.currentHealth);
                 //Debug.Log("Player healed by " + healAmount + " health");
                 Destroy(gameObject); // Destroy the health pack after use
