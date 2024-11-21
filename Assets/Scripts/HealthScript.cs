@@ -107,6 +107,14 @@ public class HealthBar : MonoBehaviour
         }
     }
 }
+
+    public void sword(GameObject currentInstance)
+    {
+        //Debug.Log("Sword");
+        // Decrease health by the given amount
+        Debug.Log("Player picked up sword");
+        Debug.Log(currentInstance); // Destroy the sword object 
+    }
        
 
     private void dead(){

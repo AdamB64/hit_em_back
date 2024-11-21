@@ -373,6 +373,7 @@
 "Assets/Scripts/HealthScript.cs"
 "Assets/Scripts/Options/ResolutionScript.cs"
 "Assets/Scripts/Options/VolumeScript.cs"
+"Assets/Scripts/SwordRespawnScript.cs"
 -langversion:9.0
 /deterministic
 /optimize+

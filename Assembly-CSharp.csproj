@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Options\VolumeScript.cs" />
     <Compile Include="Assets\Scripts\Buttons\Start scripts\QuitScript.cs" />
     <Compile Include="Assets\Scripts\Options\ResolutionScript.cs" />
+    <Compile Include="Assets\Scripts\SwordRespawnScript.cs" />
     <Compile Include="Assets\Scripts\Buttons\Ex Sripts\SwScript.cs" />
     <Compile Include="Assets\Scripts\Buttons\Start scripts\StartScript.cs" />
     <Compile Include="Assets\Kabungus\HouseholdItems\Scripts\MouseLook.cs" />
