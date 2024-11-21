@@ -10,7 +10,7 @@ public class KnightAIWithTag : MonoBehaviour
     private bool hasDealtDamage = false; // Tracks whether damage has been dealt during this attack
 
     private int count = 1; // Or use a bool if it's binary (true/false)
-    public int health = 45;
+    public float health = 45f; // Health of the AI
     public RectTransform HealthIMG;
 
     private NavMeshAgent agent;
@@ -178,20 +178,21 @@ public class KnightAIWithTag : MonoBehaviour
 
     public void healthBar(float amount)
     {
-        //Debug.Log(Playerhealth);
-        //Playerhealth = playerObj.GetComponent<HealthBar>();
-        //Debug.Log(Playerhealth);
+        Debug.Log("AI took damage: " + amount );
 
         // Decrease health by the given amount
         originalWidth = HealthIMG.rect.width;
-        health -= (int)amount;
-        float healthPercentage = (float)health / 45f;
-        Debug.Log(HealthIMG.sizeDelta);
+        Debug.Log("health and amount "+health+" "+amount);
+        health = health- amount;
+        Debug.Log("Health "+health);
+        float healthPercentage = health / 45f;
+        Debug.Log("per "+healthPercentage);
+        //Debug.Log(HealthIMG.sizeDelta);
         HealthIMG.sizeDelta = new Vector2(originalWidth * healthPercentage, HealthIMG.sizeDelta.y);
-        Debug.Log(HealthIMG.sizeDelta);
+        //Debug.Log(HealthIMG.sizeDelta);
         if (health <= 0)
         {
-            health = 0;
+            //health = 0;
             Destroy(gameObject);
         }
     }

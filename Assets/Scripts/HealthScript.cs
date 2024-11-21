@@ -13,6 +13,11 @@ public class HealthBar : MonoBehaviour
     public RawImage DeadImage;
     public RawImage Sword;
     public RawImage HitSword;
+    public float AIDamage = 15f; // Amount of damage to deal to AI
+    public float PlayerDamage=10f; // Amount of damage to deal to Player
+    public string currentSword= ""; // Tracks the name of the current sword instance
+    private bool isSwordActive = false; // Tracks whether a sword has been picked up
+
 
     private bool Hit = false;
     private float originalWidth; // Stores the original width of the health bar
@@ -25,6 +30,57 @@ public class HealthBar : MonoBehaviour
         //Debug.Log("Start");
         // Cache the original width of the health bar
         originalWidth = healthBarImage.rect.width;
+    }
+
+    private void Update()
+    {
+        // Continuously check for the E key press
+        if (isSwordActive && Input.GetKeyDown(KeyCode.E))
+        {
+            HandleSwordAction();
+        }
+    }
+
+    public void sword(GameObject currentInstance)
+    {
+        // Store the name of the current sword and activate the flag
+        currentSword = currentInstance.name;
+        isSwordActive = true;
+    }
+
+    private void HandleSwordAction()
+    {
+        // Handle the sword logic based on the current sword
+        if (currentSword == "Sword1(Clone)")
+        {
+            Debug.Log("1 pressed E");
+            AIDamage = 30f;
+            StartCoroutine(ResetAIDamageAfterDelay(10f));
+            isSwordActive = false;
+        }
+        else if (currentSword == "Sword2(Clone)")
+        {
+            Debug.Log("2 pressed E");
+            PlayerDamage = 5f;
+            StartCoroutine(ResetAIDamageAfterDelay(10f));
+            isSwordActive = false;
+        }
+        else if (currentSword == "Sword3(Clone)")
+        {
+            Debug.Log("3 pressed E");
+            PlayerDamage = 0f;
+            StartCoroutine(ResetAIDamageAfterDelay(10f));
+            isSwordActive = false;
+        }
+
+    }
+       
+    private IEnumerator ResetAIDamageAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        AIDamage = 15f; // Reset AIDamage to default value
+        Debug.Log("AIDamage reset to default value: " + AIDamage);
+        PlayerDamage = 10f; // Reset PlayerDamage to default value
     }
 
     //void Update()
@@ -44,12 +100,14 @@ public class HealthBar : MonoBehaviour
         // Calculate the health percentage (value between 0 and 1)
         float healthPercentage = currentHealth / maxHealth;
 
+        Debug.Log("Health Percentage: " + healthPercentage);
         // Adjust the width of the health bar based on the health percentage
         healthBarImage.sizeDelta = new Vector2(originalWidth * healthPercentage, healthBarImage.sizeDelta.y);
     }
 
     public void TakeDamage(float amount)
     {
+        amount = PlayerDamage;
         //Debug.Log("Player took damage: " + amount + " health");
         // Decrease health by the given amount
         currentHealth -= amount;
@@ -85,7 +143,7 @@ public class HealthBar : MonoBehaviour
     Debug.Log("Mouse Button Clicked");
 
     // Find all colliders within the radius
-    Collider[] hitColliders = Physics.OverlapSphere(transform.position, 5f);
+    Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1f);
     Debug.Log("Number of colliders detected: " + hitColliders.Length);
 
     // Loop through all the colliders found in the radius
@@ -94,28 +152,25 @@ public class HealthBar : MonoBehaviour
         // Check if the object has the "AI" tag
         if (hitCollider.CompareTag("AI"))
         {
-            Debug.Log("AI Attack");
+            //Debug.Log("AI Attack");
 
             // Get the HealthBar component (or equivalent) on the AI object
             KnightAIWithTag aiHealth = hitCollider.GetComponent<KnightAIWithTag>();
 
-            Sword.rectTransform.anchoredPosition = new Vector3(435,-166,0); // Adjust as needed
-            HitSword.rectTransform.anchoredPosition = new Vector3(0,-400, 0); // Adjust as needed
+            if (Sword.rectTransform.anchoredPosition == new Vector2(435,-166)){
+                //Debug.Log("Sword hit");
+                //will do the attack twice so this is here to make sure its only once
+            }else{
 
-            aiHealth.healthBar(15f); // Deal damage to the AI
+            aiHealth.healthBar(AIDamage); // Deal damage to the AI
+            Debug.Log(AIDamage);
+            }
+             Sword.rectTransform.anchoredPosition = new Vector3(435,-166,0); // Adjust as needed
+            HitSword.rectTransform.anchoredPosition = new Vector3(0,-400, 0); // Adjust as needed
             
         }
     }
 }
-
-    public void sword(GameObject currentInstance)
-    {
-        //Debug.Log("Sword");
-        // Decrease health by the given amount
-        Debug.Log("Player picked up sword");
-        Debug.Log(currentInstance); // Destroy the sword object 
-    }
-       
 
     private void dead(){
         Debug.Log("Dead");
