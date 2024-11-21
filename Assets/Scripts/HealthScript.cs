@@ -16,7 +16,7 @@ public class HealthBar : MonoBehaviour
     public float AIDamage = 15f; // Amount of damage to deal to AI
     public float PlayerDamage=10f; // Amount of damage to deal to Player
     public string currentSword= ""; // Tracks the name of the current sword instance
-    private bool isSwordActive = false; // Tracks whether a sword has been picked up
+    public bool isSwordActive = false; // Tracks whether a sword has been picked up
 
 
     private bool Hit = false;

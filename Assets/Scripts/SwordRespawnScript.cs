@@ -54,6 +54,10 @@ public class RandomPrefabSpawner : MonoBehaviour
         playerObj = GameObject.FindGameObjectWithTag("Player");
         //Player = playerObj.transform; // Assign the Transform
         Player = playerObj.GetComponent<HealthBar>(); // Get the PlayerStats script
+        if(Player.isSwordActive==true){
+            Debug.Log("Sword is active");
+        }
+        else{
         // Check if the object colliding is the player (tag it appropriately).
         if (other.CompareTag("Player"))
         {
@@ -71,5 +75,6 @@ public class RandomPrefabSpawner : MonoBehaviour
             // Start the respawn process.
             StartCoroutine(RespawnAfterDelay());
         }
+    }
     }
 }
