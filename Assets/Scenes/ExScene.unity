@@ -2319,10 +2319,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Usale swords \n\n\nThis is how the swords work and the effects of each
-    sword.\nThey will respawn as a random sword every 30 second on the levls and
-    will be placed around the map\nLeft- Increases attack damage\nmiddle - increses
-    defence so that each attack taken equals half.\nright - for 5 seconds the player
-    will be able to attack at will."
+    sword.\nThey will respawn as a random sword every 10 to 20 second on the levls
+    and will be placed around the map and only able to use and hold a sword a time.\nLeft-
+    Increases attack damage\nmiddle - increses defence so that each attack taken
+    equals half.\nright - for 5 seconds the player will be able to attack at will."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

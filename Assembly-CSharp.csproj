@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Buttons\Ex Sripts\CloseSwScript.cs" />
+    <Compile Include="Assets\Scripts\LevelCompleteScript.cs" />
     <Compile Include="Assets\Scripts\Buttons\Start scripts\ExScript.cs" />
     <Compile Include="Assets\Scripts\HealthPackScript.cs" />
     <Compile Include="Assets\Scripts\HealthScript.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\ModularFirstPersonController\FirstPersonController\FirstPersonController.cs" />
     <Compile Include="Assets\Kabungus\HouseholdItems\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\AIEnemiesScript.cs" />
+    <Compile Include="Assets\Scripts\GameCompleteScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
