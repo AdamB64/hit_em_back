@@ -19,6 +19,12 @@ public class HealthBar : MonoBehaviour
     public bool isSwordActive = false; // Tracks whether a sword has been picked up
 
 
+    //Sword in hand IMGs
+    public RawImage swords;
+    public RawImage Sword1;
+    public RawImage Sword2;
+    public RawImage Sword3;
+
     private bool Hit = false;
     private float originalWidth; // Stores the original width of the health bar
 
@@ -34,6 +40,21 @@ public class HealthBar : MonoBehaviour
 
     private void Update()
     {
+        if (currentSword == "Sword1(Clone)")
+            {
+                Sword1.rectTransform.anchoredPosition = new Vector2(-478, -201); // Adjust as needed
+                swords.rectTransform.anchoredPosition = new Vector2(-970, -201); // Adjust as needed
+            }
+            else if (currentSword == "Sword2(Clone)")
+            {
+                Sword2.rectTransform.anchoredPosition = new Vector2(-478, -201); // Adjust as needed
+                swords.rectTransform.anchoredPosition = new Vector2(-970, -201); // Adjust as needed
+            }
+            else if (currentSword == "Sword3(Clone)")
+            {
+                Sword3.rectTransform.anchoredPosition = new Vector2(-478, -201); // Adjust as needed
+                swords.rectTransform.anchoredPosition = new Vector2(-970, -201); // Adjust as needed
+            }
         // Continuously check for the E key press
         if (isSwordActive && Input.GetKeyDown(KeyCode.E))
         {
@@ -53,24 +74,33 @@ public class HealthBar : MonoBehaviour
         // Handle the sword logic based on the current sword
         if (currentSword == "Sword1(Clone)")
         {
+            Sword1.rectTransform.anchoredPosition = new Vector2(-970, -201);
+            swords.rectTransform.anchoredPosition = new Vector2(-478, -201); // Adjust as needed
             Debug.Log("1 pressed E");
             AIDamage = 30f;
             StartCoroutine(ResetAIDamageAfterDelay(10f));
             isSwordActive = false;
+            currentSword = "";
         }
         else if (currentSword == "Sword2(Clone)")
         {
+            Sword2.rectTransform.anchoredPosition = new Vector2(-970, -201);
+            swords.rectTransform.anchoredPosition = new Vector2(-478, -201); // Adjust as needed
             Debug.Log("2 pressed E");
             PlayerDamage = 5f;
             StartCoroutine(ResetAIDamageAfterDelay(10f));
             isSwordActive = false;
+            currentSword = "";
         }
         else if (currentSword == "Sword3(Clone)")
         {
+            Sword3.rectTransform.anchoredPosition = new Vector2(-970, -201);
+            swords.rectTransform.anchoredPosition = new Vector2(-478, -201); // Adjust as needed
             Debug.Log("3 pressed E");
             PlayerDamage = 0f;
             StartCoroutine(ResetAIDamageAfterDelay(10f));
             isSwordActive = false;
+            currentSword = "";
         }
 
     }

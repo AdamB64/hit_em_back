@@ -388,8 +388,8 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: b50b8fcc0452e034d806ee2d00122129, type: 3}
   - {fileID: 919132149155446097, guid: e462b76e8a852404aaa66ca12c45666d, type: 3}
   - {fileID: 919132149155446097, guid: e3ad916c9c1cfb74f804afde5c1ee2b1, type: 3}
-  minRespawnTime: 1
-  maxRespawnTime: 2
+  minRespawnTime: 10
+  maxRespawnTime: 20
   playerObj: {fileID: 998759692}
 --- !u!4 &121280661
 Transform:
@@ -1420,8 +1420,8 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: b50b8fcc0452e034d806ee2d00122129, type: 3}
   - {fileID: 919132149155446097, guid: e462b76e8a852404aaa66ca12c45666d, type: 3}
   - {fileID: 919132149155446097, guid: e3ad916c9c1cfb74f804afde5c1ee2b1, type: 3}
-  minRespawnTime: 1
-  maxRespawnTime: 2
+  minRespawnTime: 10
+  maxRespawnTime: 20
   playerObj: {fileID: 998759692}
 --- !u!4 &470960134
 Transform:
@@ -1899,8 +1899,8 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: b50b8fcc0452e034d806ee2d00122129, type: 3}
   - {fileID: 919132149155446097, guid: e462b76e8a852404aaa66ca12c45666d, type: 3}
   - {fileID: 919132149155446097, guid: e3ad916c9c1cfb74f804afde5c1ee2b1, type: 3}
-  minRespawnTime: 1
-  maxRespawnTime: 2
+  minRespawnTime: 10
+  maxRespawnTime: 20
   playerObj: {fileID: 998759692}
 --- !u!4 &732108060
 Transform:
@@ -2343,8 +2343,8 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: b50b8fcc0452e034d806ee2d00122129, type: 3}
   - {fileID: 919132149155446097, guid: e462b76e8a852404aaa66ca12c45666d, type: 3}
   - {fileID: 919132149155446097, guid: e3ad916c9c1cfb74f804afde5c1ee2b1, type: 3}
-  minRespawnTime: 1
-  maxRespawnTime: 2
+  minRespawnTime: 10
+  maxRespawnTime: 20
   playerObj: {fileID: 998759692}
 --- !u!4 &872233537
 Transform:
@@ -2554,6 +2554,10 @@ MonoBehaviour:
   PlayerDamage: 0
   currentSword: 
   isSwordActive: 0
+  swords: {fileID: 0}
+  Sword1: {fileID: 0}
+  Sword2: {fileID: 0}
+  Sword3: {fileID: 0}
   sceneName: StartScene
 --- !u!1 &1046123041
 GameObject:
@@ -5151,8 +5155,8 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: b50b8fcc0452e034d806ee2d00122129, type: 3}
   - {fileID: 919132149155446097, guid: e462b76e8a852404aaa66ca12c45666d, type: 3}
   - {fileID: 919132149155446097, guid: e3ad916c9c1cfb74f804afde5c1ee2b1, type: 3}
-  minRespawnTime: 1
-  maxRespawnTime: 2
+  minRespawnTime: 10
+  maxRespawnTime: 20
   playerObj: {fileID: 998759692}
 --- !u!4 &1901460938
 Transform:
