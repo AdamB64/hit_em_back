@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Buttons\Start scripts\ExScript.cs" />
     <Compile Include="Assets\Scripts\HealthPackScript.cs" />
     <Compile Include="Assets\Scripts\HealthScript.cs" />
+    <Compile Include="Assets\Scripts\Buttons\Start scripts\Level1Script.cs" />
     <Compile Include="Assets\Scripts\Buttons\Ex Sripts\CloseHPScript.cs" />
     <Compile Include="Assets\Scripts\Options\VolumeScript.cs" />
     <Compile Include="Assets\Scripts\Buttons\Start scripts\QuitScript.cs" />
