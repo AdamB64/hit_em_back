@@ -2551,7 +2551,7 @@ MonoBehaviour:
   Sword: {fileID: 384490569}
   HitSword: {fileID: 1564896136}
   AIDamage: 15
-  PlayerDamage: 0
+  PlayerDamage: 10
   currentSword: 
   isSwordActive: 0
   swords: {fileID: 0}
