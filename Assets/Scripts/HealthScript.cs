@@ -31,8 +31,13 @@ public class HealthBar : MonoBehaviour
     [SerializeField]
     private string sceneName = "StartScene";
 
+    public GameObject audioObj;
+    public GameManagerAudio Audio;
+
     void Start()
     {
+        audioObj = GameObject.FindGameObjectWithTag("Audio");
+        Audio = audioObj.GetComponent<GameManagerAudio>(); // Get the audio script
         //Debug.Log("Start");
         // Cache the original width of the health bar
         originalWidth = healthBarImage.rect.width;
@@ -44,17 +49,20 @@ public class HealthBar : MonoBehaviour
             {
                 Sword1.rectTransform.anchoredPosition = new Vector2(-478, -201); // Adjust as needed
                 swords.rectTransform.anchoredPosition = new Vector2(-970, -201); // Adjust as needed
+                Audio.PlayEquipSound();
             }
             else if (currentSword == "Sword2(Clone)")
             {
                 Sword2.rectTransform.anchoredPosition = new Vector2(-478, -201); // Adjust as needed
                 swords.rectTransform.anchoredPosition = new Vector2(-970, -201); // Adjust as needed
-            }
+                Audio.PlayEquipSound();
+        }
             else if (currentSword == "Sword3(Clone)")
             {
                 Sword3.rectTransform.anchoredPosition = new Vector2(-478, -201); // Adjust as needed
                 swords.rectTransform.anchoredPosition = new Vector2(-970, -201); // Adjust as needed
-            }
+                Audio.PlayEquipSound();
+        }
         // Continuously check for the E key press
         if (isSwordActive && Input.GetKeyDown(KeyCode.E))
         {
@@ -76,7 +84,7 @@ public class HealthBar : MonoBehaviour
         {
             Sword1.rectTransform.anchoredPosition = new Vector2(-970, -201);
             swords.rectTransform.anchoredPosition = new Vector2(-478, -201); // Adjust as needed
-            Debug.Log("1 pressed E");
+            //Debug.Log("1 pressed E");
             AIDamage = 30f;
             StartCoroutine(ResetAIDamageAfterDelay(10f));
             isSwordActive = false;
@@ -86,7 +94,7 @@ public class HealthBar : MonoBehaviour
         {
             Sword2.rectTransform.anchoredPosition = new Vector2(-970, -201);
             swords.rectTransform.anchoredPosition = new Vector2(-478, -201); // Adjust as needed
-            Debug.Log("2 pressed E");
+            //Debug.Log("2 pressed E");
             PlayerDamage = 5f;
             StartCoroutine(ResetAIDamageAfterDelay(10f));
             isSwordActive = false;
@@ -96,7 +104,7 @@ public class HealthBar : MonoBehaviour
         {
             Sword3.rectTransform.anchoredPosition = new Vector2(-970, -201);
             swords.rectTransform.anchoredPosition = new Vector2(-478, -201); // Adjust as needed
-            Debug.Log("3 pressed E");
+            //Debug.Log("3 pressed E");
             PlayerDamage = 0f;
             StartCoroutine(ResetAIDamageAfterDelay(10f));
             isSwordActive = false;
@@ -109,20 +117,9 @@ public class HealthBar : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         AIDamage = 15f; // Reset AIDamage to default value
-        Debug.Log("AIDamage reset to default value: " + AIDamage);
+        //Debug.Log("AIDamage reset to default value: " + AIDamage);
         PlayerDamage = 10f; // Reset PlayerDamage to default value
     }
-
-    //void Update()
-    //{
-        //Debug.Log("Update");
-        // Example input to simulate taking damage (press Space to take damage)
-        //if (Input.GetKeyDown(KeyCode.H))
-        //{
-            //Debug.Log("H key pressed");
-            //TakeDamage(10f); // Decrease health by 10
-        //}
-    //}
 
     void UpdateHealthBar()
     {
@@ -130,9 +127,10 @@ public class HealthBar : MonoBehaviour
         // Calculate the health percentage (value between 0 and 1)
         float healthPercentage = currentHealth / maxHealth;
 
-        Debug.Log("Health Percentage: " + healthPercentage);
+        //Debug.Log("Health Percentage: " + healthPercentage);
         // Adjust the width of the health bar based on the health percentage
         healthBarImage.sizeDelta = new Vector2(originalWidth * healthPercentage, healthBarImage.sizeDelta.y);
+        Audio.PlayHealSound();
     }
 
     public void TakeDamage(float amount)
@@ -148,7 +146,7 @@ public class HealthBar : MonoBehaviour
 
         Hit=true;
         if(Hit){
-            Debug.Log("Hit");
+            //Debug.Log("Hit");
             StartCoroutine(Attack());
             Hit=false;
         }
@@ -161,7 +159,7 @@ public class HealthBar : MonoBehaviour
 
     private IEnumerator Attack()
 {
-    Debug.Log("Attack");
+    //Debug.Log("Attack");
 
     // Wait until the left mouse button is clicked
     while (!Input.GetMouseButtonDown(0))  // Wait until mouse button is clicked
@@ -170,11 +168,11 @@ public class HealthBar : MonoBehaviour
     }
 
     // Once the button is clicked, proceed with the rest of the attack logic
-    Debug.Log("Mouse Button Clicked");
+    //Debug.Log("Mouse Button Clicked");
 
     // Find all colliders within the radius
     Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1f);
-    Debug.Log("Number of colliders detected: " + hitColliders.Length);
+    //Debug.Log("Number of colliders detected: " + hitColliders.Length);
 
     // Loop through all the colliders found in the radius
     foreach (Collider hitCollider in hitColliders)
@@ -193,7 +191,9 @@ public class HealthBar : MonoBehaviour
             }else{
 
             aiHealth.healthBar(AIDamage); // Deal damage to the AI
-            Debug.Log(AIDamage);
+                    Audio.AttackAudioSound();
+
+            //Debug.Log(AIDamage);
             }
              Sword.rectTransform.anchoredPosition = new Vector3(435,-166,0); // Adjust as needed
             HitSword.rectTransform.anchoredPosition = new Vector3(0,-400, 0); // Adjust as needed
@@ -245,7 +245,7 @@ public class HealthBar : MonoBehaviour
     {
         currentHealth += amount;
         currentHealth = Mathf.Min(currentHealth, maxHealth); // Ensure health doesn't exceed max health
-        Debug.Log("Player Healed. Current Health: " + currentHealth);
+        //Debug.Log("Player Healed. Current Health: " + currentHealth);
         UpdateHealthBar();
     }
 

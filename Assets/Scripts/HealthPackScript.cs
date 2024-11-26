@@ -36,7 +36,7 @@ public class HealthPack : MonoBehaviour
     }
     private IEnumerator RespawnHealth(float delay)
     {
-        Debug.Log("ran");
+        //Debug.Log("ran");
         yield return new WaitForSeconds(delay);
         meshRenderer.enabled = true;
         healthPackCollider.enabled = true;

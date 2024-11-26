@@ -1,12 +1,53 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|c:\\users\\2107616\\2024-25\\game dev\\game\\hit_em_back\\assets\\scripts\\healthscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\healthscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\assets\\scripts\\healthpackscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\healthpackscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HealthScript.cs",
+              "DocumentMoniker": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\HealthScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\HealthScript.cs",
+              "ToolTip": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\HealthScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\HealthScript.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAAwLgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T14:01:47.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HealthPackScript.cs",
+              "DocumentMoniker": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\HealthPackScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\HealthPackScript.cs",
+              "ToolTip": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\HealthPackScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\HealthPackScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T14:01:15.729Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
