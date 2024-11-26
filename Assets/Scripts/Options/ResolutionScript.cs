@@ -38,7 +38,8 @@ public class ResolutionManager : MonoBehaviour
 
     private void SetResolution(int width, int height)
     {
-        Screen.SetResolution(width, height, Screen.fullScreen);
+        Screen.SetResolution(width, height, false);
         Debug.Log($"Resolution set to {width}x{height}");
+        Debug.Log($"Current resolution: {Screen.width} x {Screen.height}, Fullscreen: {Screen.fullScreen}");
     }
 }

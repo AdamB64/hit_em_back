@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\assets\\scripts\\healthpackscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\healthpackscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|c:\\users\\2107616\\2024-25\\game dev\\game\\hit_em_back\\assets\\scripts\\healthscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\healthscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\assets\\scripts\\healthpackscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\healthpackscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|c:\\users\\2107616\\2024-25\\game dev\\game\\hit_em_back\\assets\\scripts\\auidoscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\auidoscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|c:\\users\\2107616\\2024-25\\game dev\\game\\hit_em_back\\assets\\scripts\\swordrespawnscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\swordrespawnscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|c:\\users\\2107616\\2024-25\\game dev\\game\\hit_em_back\\assets\\scripts\\options\\resolutionscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E90D585-063F-0F0B-CFBD-AEA4A95BCEB1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\options\\resolutionscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +30,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "ResolutionScript.cs",
+              "DocumentMoniker": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\Options\\ResolutionScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Options\\ResolutionScript.cs",
+              "ToolTip": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\Options\\ResolutionScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Options\\ResolutionScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T14:34:54.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SwordRespawnScript.cs",
+              "DocumentMoniker": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\SwordRespawnScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SwordRespawnScript.cs",
+              "ToolTip": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\SwordRespawnScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SwordRespawnScript.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwDkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T14:16:16.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuidoScript.cs",
+              "DocumentMoniker": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\AuidoScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AuidoScript.cs",
+              "ToolTip": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\AuidoScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AuidoScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T14:08:57.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "HealthScript.cs",
               "DocumentMoniker": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\HealthScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HealthScript.cs",
               "ToolTip": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\HealthScript.cs",
               "RelativeToolTip": "Assets\\Scripts\\HealthScript.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAAwLgAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAANsAAAAAAAAAAAAcwD0AAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T14:01:47.625Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "HealthPackScript.cs",
               "DocumentMoniker": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\HealthPackScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HealthPackScript.cs",
               "ToolTip": "C:\\Users\\2107616\\2024-25\\Game Dev\\game\\hit_em_back\\Assets\\Scripts\\HealthPackScript.cs",
               "RelativeToolTip": "Assets\\Scripts\\HealthPackScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T14:01:15.729Z"
+              "WhenOpened": "2024-11-26T14:01:15.729Z",
+              "EditorCaption": ""
             }
           ]
         }
