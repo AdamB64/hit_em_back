@@ -31,8 +31,10 @@ public class HealthBar : MonoBehaviour
     [SerializeField]
     private string sceneName = "StartScene";
 
-    public GameObject audioObj;
-    public GameManagerAudio Audio;
+    private GameObject audioObj;
+    private GameManagerAudio Audio;
+
+    public AudioSource WalkingAudioSound;
 
     void Start()
     {
@@ -45,23 +47,44 @@ public class HealthBar : MonoBehaviour
 
     private void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadScene(sceneName);
+        }
+        
+        // Check if the Left or Right Shift key is being held
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+        {
+            // If the audio is not already playing, start playing it
+            if (!WalkingAudioSound.isPlaying)
+            {
+                WalkingAudioSound.loop = true; // Ensure the audio loops
+                WalkingAudioSound.Play();
+            }
+        }
+        else
+        {
+            // If the Shift key is not pressed and the audio is playing, stop it
+            if (WalkingAudioSound.isPlaying)
+            {
+                WalkingAudioSound.Stop();
+            }
+        }
         if (currentSword == "Sword1(Clone)")
             {
                 Sword1.rectTransform.anchoredPosition = new Vector2(-478, -201); // Adjust as needed
                 swords.rectTransform.anchoredPosition = new Vector2(-970, -201); // Adjust as needed
-                Audio.PlayEquipSound();
             }
             else if (currentSword == "Sword2(Clone)")
             {
                 Sword2.rectTransform.anchoredPosition = new Vector2(-478, -201); // Adjust as needed
                 swords.rectTransform.anchoredPosition = new Vector2(-970, -201); // Adjust as needed
-                Audio.PlayEquipSound();
         }
             else if (currentSword == "Sword3(Clone)")
             {
                 Sword3.rectTransform.anchoredPosition = new Vector2(-478, -201); // Adjust as needed
                 swords.rectTransform.anchoredPosition = new Vector2(-970, -201); // Adjust as needed
-                Audio.PlayEquipSound();
         }
         // Continuously check for the E key press
         if (isSwordActive && Input.GetKeyDown(KeyCode.E))
@@ -72,6 +95,7 @@ public class HealthBar : MonoBehaviour
 
     public void sword(GameObject currentInstance)
     {
+        Audio.PlayEquipSound();
         // Store the name of the current sword and activate the flag
         currentSword = currentInstance.name;
         isSwordActive = true;
@@ -82,6 +106,7 @@ public class HealthBar : MonoBehaviour
         // Handle the sword logic based on the current sword
         if (currentSword == "Sword1(Clone)")
         {
+            Audio.UnequipAudioSound();
             Sword1.rectTransform.anchoredPosition = new Vector2(-970, -201);
             swords.rectTransform.anchoredPosition = new Vector2(-478, -201); // Adjust as needed
             //Debug.Log("1 pressed E");
@@ -92,6 +117,7 @@ public class HealthBar : MonoBehaviour
         }
         else if (currentSword == "Sword2(Clone)")
         {
+            Audio.UnequipAudioSound();
             Sword2.rectTransform.anchoredPosition = new Vector2(-970, -201);
             swords.rectTransform.anchoredPosition = new Vector2(-478, -201); // Adjust as needed
             //Debug.Log("2 pressed E");
@@ -102,6 +128,7 @@ public class HealthBar : MonoBehaviour
         }
         else if (currentSword == "Sword3(Clone)")
         {
+            Audio.UnequipAudioSound();
             Sword3.rectTransform.anchoredPosition = new Vector2(-970, -201);
             swords.rectTransform.anchoredPosition = new Vector2(-478, -201); // Adjust as needed
             //Debug.Log("3 pressed E");
@@ -196,7 +223,7 @@ public class HealthBar : MonoBehaviour
             //Debug.Log(AIDamage);
             }
              Sword.rectTransform.anchoredPosition = new Vector3(435,-166,0); // Adjust as needed
-            HitSword.rectTransform.anchoredPosition = new Vector3(0,-400, 0); // Adjust as needed
+            HitSword.rectTransform.anchoredPosition = new Vector3(-4000,-4000, 0); // Adjust as needed
             
         }
     }
@@ -224,20 +251,23 @@ public class HealthBar : MonoBehaviour
     // Move the DeadImage immediately (example: set position to center)
     DeadImage.rectTransform.anchoredPosition = new Vector2(0, 0); // Adjust as needed
     DeadImage.gameObject.SetActive(true); // Ensure it is visible
+    float volume= AudioListener.volume;
+    AudioListener.volume = 0f; // Mute the game audio
 
     // Start the coroutine for delayed actions
-    StartCoroutine(WaitAndExecute());
+    StartCoroutine(WaitAndExecute(volume));
     Cursor.lockState = CursorLockMode.None;
 
     }
 
-     IEnumerator WaitAndExecute()
+     IEnumerator WaitAndExecute(float volume)
     {
         // Wait for 30 seconds
         yield return new WaitForSeconds(10);
 
         // Code to execute after 30 seconds
-        Debug.Log("30 seconds have passed!");
+        //Debug.Log("30 seconds have passed!");
+        AudioListener.volume = volume; // Unmute the game audio 
         SceneManager.LoadScene(sceneName);
     }
 

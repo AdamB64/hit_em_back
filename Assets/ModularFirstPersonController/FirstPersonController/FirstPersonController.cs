@@ -20,6 +20,9 @@ public class FirstPersonController : MonoBehaviour
 
     #region Camera Movement Variables
 
+     public GameObject audioObj;
+    public GameManagerAudio Audio;
+
     public Camera playerCamera;
 
     public float fov = 60f;
@@ -278,6 +281,8 @@ public class FirstPersonController : MonoBehaviour
         {
             if(isSprinting)
             {
+
+
                 isZoomed = false;
                 playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, sprintFOV, sprintFOVStepTime * Time.deltaTime);
 

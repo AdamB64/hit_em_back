@@ -8,6 +8,7 @@ public class GameManagerAudio : MonoBehaviour
     public AudioSource damageAudioSource;
     public AudioSource WalkingAudio;
     public AudioSource AttackAudio;
+    public AudioSource unequipAudioSource;
 
     // Public methods to play each sound
     public void PlayHealSound()
@@ -65,6 +66,16 @@ public class GameManagerAudio : MonoBehaviour
         else
         {
             Debug.LogError("Attack Audiosource not assigneed");
+        }
+    }
+    public void UnequipAudioSound() {
+        if (unequipAudioSource != null)
+        {
+            unequipAudioSource.Stop();
+        }
+        else
+        {
+            Debug.LogError("Buff AudioSource not assigned!");
         }
     }
 }
