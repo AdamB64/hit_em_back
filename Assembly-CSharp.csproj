@@ -64,8 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Buttons\Ex Sripts\CloseSwScript.cs" />
+    <Compile Include="Assets\Scripts\Localization\LanguageDropdown.cs" />
     <Compile Include="Assets\Scripts\LevelCompleteScript.cs" />
     <Compile Include="Assets\Scripts\Buttons\Start scripts\ExScript.cs" />
+    <Compile Include="Assets\Scripts\Localization\LocalizationManager.cs" />
     <Compile Include="Assets\Scripts\HealthPackScript.cs" />
     <Compile Include="Assets\Scripts\HealthScript.cs" />
     <Compile Include="Assets\Scripts\Buttons\Start scripts\Level1Script.cs" />
@@ -81,6 +83,7 @@
     <Compile Include="Assets\Scripts\DifficultyScript.cs" />
     <Compile Include="Assets\Kabungus\HouseholdItems\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Buttons\Start scripts\SetScript.cs" />
+    <Compile Include="Assets\Scripts\Localization\LocalizedText.cs" />
     <Compile Include="Assets\Scripts\colourChange.cs" />
     <Compile Include="Assets\Scripts\Buttons\Ex Sripts\HPScript.cs" />
     <Compile Include="Assets\ModularFirstPersonController\FirstPersonController\FirstPersonController.cs" />

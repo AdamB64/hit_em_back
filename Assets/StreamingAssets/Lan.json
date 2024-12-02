@@ -1,0 +1,54 @@
+{
+    "entries": [
+        {
+            "key": "Res",
+            "translations": {
+                "En": "Resolution",
+                "Fr": "Résolution",
+                "De": "Auflösung",
+                "Es": "Resolución",
+                "It": "Risoluzione"
+            }
+        },
+        {
+            "key": "Vol",
+            "translations": {
+                "En": "Volume",
+                "Fr": "Volume",
+                "De": "Volumen",
+                "Es": "Volumen",
+                "It": "Volume"
+            }
+        },
+        {
+            "key": "Dif",
+            "translations": {
+                "En": "Difficulty",
+                "Fr": "Difficulté",
+                "De": "Schwierigkeit",
+                "Es": "Dificultad",
+                "It": "Difficoltà"
+            }
+        },
+        {
+            "key": "Set",
+            "translations": {
+                "En": "Settings",
+                "Fr": "Paramètres",
+                "De": "Einstellungen",
+                "Es": "Ajustes",
+                "It": "Impostazioni"
+            }
+        },
+        {
+            "key": "Lang",
+            "translations": {
+                "En": "Language",
+                "Fr": "Langue",
+                "De": "Sprache",
+                "Es": "Idioma",
+                "It": "Lingua"
+            }
+        }
+    ]
+}
