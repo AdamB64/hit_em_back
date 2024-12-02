@@ -6,6 +6,7 @@ TagManager:
   tags:
   - AI
   - Audio
+  - difficulty
   layers:
   - Default
   - TransparentFX

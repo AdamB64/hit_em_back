@@ -698,7 +698,7 @@ MonoBehaviour:
   chaseRange: 10
   attackRange: 2
   detectionInterval: 1
-  health: 45
+  health: 0
   HealthIMG: {fileID: 746652081}
   playerObj: {fileID: 998759692}
 --- !u!4 &176266003 stripped

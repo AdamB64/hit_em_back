@@ -10,7 +10,7 @@ public class KnightAIWithTag : MonoBehaviour
     private bool hasDealtDamage = false; // Tracks whether damage has been dealt during this attack
 
     private int count = 1; // Or use a bool if it's binary (true/false)
-    public float health = 45f; // Health of the AI
+    public float health; // Health of the AI
     public RectTransform HealthIMG;
 
     private NavMeshAgent agent;
@@ -24,6 +24,17 @@ public class KnightAIWithTag : MonoBehaviour
     HealthBar Playerhealth;
     void Start()
     {
+        // Use the DifficultyManager to set health
+    if (DifficultyManager.Instance != null)
+    {
+        health = DifficultyManager.Instance.GetEnemyHealth();
+    }
+    else
+    {
+        Debug.LogError("DifficultyManager not found. Defaulting health to 45.");
+        health = 45f; // Default health
+    }
+
 
         originalWidth = HealthIMG.rect.width;
 

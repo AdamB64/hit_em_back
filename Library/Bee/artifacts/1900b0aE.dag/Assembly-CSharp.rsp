@@ -371,6 +371,7 @@
 "Assets/Scripts/Buttons/Start scripts/SetScript.cs"
 "Assets/Scripts/Buttons/Start scripts/StartScript.cs"
 "Assets/Scripts/colourChange.cs"
+"Assets/Scripts/DifficultyScript.cs"
 "Assets/Scripts/GameCompleteScript.cs"
 "Assets/Scripts/HealthPackScript.cs"
 "Assets/Scripts/HealthScript.cs"

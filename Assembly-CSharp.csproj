@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Buttons\Ex Sripts\SwScript.cs" />
     <Compile Include="Assets\Scripts\MatchScript.cs" />
     <Compile Include="Assets\Scripts\Buttons\Start scripts\StartScript.cs" />
+    <Compile Include="Assets\Scripts\DifficultyScript.cs" />
     <Compile Include="Assets\Kabungus\HouseholdItems\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Buttons\Start scripts\SetScript.cs" />
     <Compile Include="Assets\Scripts\colourChange.cs" />
